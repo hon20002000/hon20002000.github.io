@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "MacauAIChallenge2019_pythonLessons_1"
+title:      "MacauAIChallenge2019_Lessons_1"
 subtitle:   " \"machine / deep learning concepts\""
 date:       2019-06-06 16:00:00
 author:     "hon20002000"
