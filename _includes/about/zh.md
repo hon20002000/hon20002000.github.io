@@ -4,7 +4,7 @@
   
 聯絡方式:  
 - Gmail: hon20002000@gmail.com    
-- [github](https://https://github.com/hon20002000)   
+- [github](https://github.com/hon20002000): https://github.com/hon20002000     
 
 
 ##### BIO:  
