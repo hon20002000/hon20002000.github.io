@@ -1,0 +1,36 @@
+---
+layout:     post
+title:      "Python blog 2019"
+subtitle:   " \"Opening, Python Blog\""
+date:       2019-06-07 16:00:00
+author:     "hon20002000"
+header-img: "img/Python.png"
+catalog: true
+tags:
+    - coding
+    - Meta
+---
+
+> “Yeah It's on. ”
+
+
+## 前言
+
+Testing.
+
+[跳过废话，直接看技术实现 ](#build) 
+
+
+<p id = "build"></p>
+---
+
+## 正文
+
+接下来说说搭建这个博客的技术细节。  
+
+正好之前就有关注过 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
+
+
+---
+
+
