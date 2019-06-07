@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      "Python blog 2019"
-subtitle:   " \"Opening, Python Blog\""
-date:       2019-06-07 16:00:00
+subtitle:   " \"MacauAIChallenge2019_pythonLessons_1\""
+date:       2019-06-06 16:00:00
 author:     "hon20002000"
 header-img: "img/Python.png"
 catalog: true
@@ -15,20 +15,14 @@ tags:
 
 ## 前言
 
-在學習Python的時候, 最重要的就是要了解變數的數據類型是什麼.
+本教程是為了讓同學們快速體驗機器學習/深度學習而設計的.
+裡面只學習最常用的python語法.
 
-一般的數據類型有:
-
-- 整數(int): -1, 0, 11, 100
-- 浮點數(float): 1.2, 3.33, 1.23e3(1.23x10^3) 
-- 字符(char): 'a', 'b', "c"
-- 字符串(string): 'apple', "orange"
-- 布林值(boolean): 1, 0 , True, False
-- 空值(None): None(空集, None不是0)
-- 變量(Variable): filename, number, x, y
-
-
-[跳过废话，直接看技术实现 ](#build) 
+教程用法:
+>>閱讀本blog上的基礎語法
+>>完成每篇文章的作業
+>>部分學習所需的檔案在[github](https://github.com/hon20002000/MacauAIChallenge2019_pythonLessons)下載
+>>在上面的github上共同開發程序
 
 
 <p id = "build"></p>
@@ -36,9 +30,19 @@ tags:
 
 ## 正文
 
-接下来说说搭建这个博客的技术细节。  
+我們的目標是訓練一個能辨認120種交通標誌的程序
+我們可以使用機器學習/深度學習的工具來完成它:
+主要步驟為:
+(1)收集資料(拍照收集圖片, 平均每種圖片約200-500張)
+(2)把圖片分類並標記名稱(每種標誌建立file, 根據名稱存放相應的圖片)
+(3)編寫程序讀取圖片的資料, 並和標籤建立一一對應關係
+(4)編寫機器/深度學習系統
+(5)利用圖片資料和對應的標籤訓練學習系統
+(6)學習系統會對每張圖片給出答案, 和預設的標籤相比較, 得出系統的準確率
+(7)改善學習系統以獲得更高的準確率
 
-正好之前就有关注过 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
+詳情參閱下面網址:
+[MacauAIChallenge2019_pythonLessons](https://github.com/hon20002000/MacauAIChallenge2019_pythonLessons)
 
 
 ---
