@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "MacauAIChallenge2019_Lessons_1"
+title:      "MacauAIChallenge2019_Lessons_2"
 subtitle:   " \"DataTpye and operation\""
 date:       2019-06-07 16:00:00
 author:     "hon20002000"
