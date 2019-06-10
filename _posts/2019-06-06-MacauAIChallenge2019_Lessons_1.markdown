@@ -42,7 +42,7 @@ tags:
 詳情參閱下面網址:  
 [MacauAIChallenge2019_pythonLessons](https://github.com/hon20002000/MacauAIChallenge2019_pythonLessons)  
 
-## HomeWork
+## 練習
   
 (1)什麼是監督式學習(Supervised learning)?  
 (2)什麼是神經網絡(neural network)?  
