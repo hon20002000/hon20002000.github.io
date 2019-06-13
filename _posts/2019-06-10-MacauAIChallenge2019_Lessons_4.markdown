@@ -48,7 +48,8 @@ list[-1]代表倒數第一個元素, list[-2]代表倒數第二個元素
     list_a: [1, 2.5, 'a', 'apple', 4]
     len: 5
     
-list其他的功能還有remove(), pop(), insert(),  sort(), sorted(), reverse(), del()等等  
+list其他的操作還有remove(), pop(), insert(),  sort(), sorted(), reverse(), del()等等  
+而sum(list), max(list), min(list)等等可以對list內的元素作一個統計  
 
     list_a = [0, 1, 2, 3, 4]
     list_a.pop()
@@ -229,9 +230,10 @@ IndentationError: expected an indented block
                                 ^
     SyntaxError: invalid syntax
     
-(c) 使用程序列出數字1~100, 把1~100的數字相加後輸出結果, 然後從列表中抽最第40~50位的數字並相加 
+(c) 使用程序把數字1~100存進列表, print出此1~100個數字  
+然後把1~100的數字相加後輸出結果(利用sum(list)), 然後從列表中利用切片抽出第40~50位的數字並相加 
 
-(d) 複制列表時會出現一個bug, 改變複制列表會影響原列表, 在網上查出這是什麼原因, 並如何避免?
+(d) 複制列表時會出現一個bug, 改變複制列表會影響原列表, 如何避免?
 
     list_a = [1,2,3,4,5]
     list_b = list_a
@@ -241,3 +243,4 @@ IndentationError: expected an indented block
     =========== result ==========
     list_a: [1,2,3,4,5,6]
     list_b: [1,2,3,4,5,6]
+

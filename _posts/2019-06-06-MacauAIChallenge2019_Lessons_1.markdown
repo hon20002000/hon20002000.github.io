@@ -7,7 +7,8 @@ author:     "hon20002000"
 header-img: "img/Python.png"
 catalog: true
 tags:
-    - Python Quick start
+    - Deep Learning Quick start
+    
 ---
 
 ## 前言
