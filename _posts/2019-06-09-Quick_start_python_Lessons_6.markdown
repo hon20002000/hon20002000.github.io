@@ -162,9 +162,8 @@ return多個返回值
     user2: Mary
     user3: Susan
     
-若usernames列表的的數量不回定, 如何編寫合適的函數來print出所有的user?
-hint:使用for user in uesrs:
-
-
+若usernames列表的的數量不回定, 如何編寫合適的函數來print出所有的user?  
+hint: 使用for user in uesrs:  
+  
 (c) 編寫等差數列的前n項和函數, def sum_ap(a1, an, d):  
     傳入首項a1, an及d, 可以自動求出項數n, 並且return Sn的值
