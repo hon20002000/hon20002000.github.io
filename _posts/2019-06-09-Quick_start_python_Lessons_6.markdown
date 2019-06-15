@@ -161,6 +161,7 @@ return多個返回值
     user1: John
     user2: Mary
     user3: Susan
+    
 若usernames列表的的數量不回定, 如何編寫合適的函數來print出所有的user?
 hint:使用for user in uesrs:
 
