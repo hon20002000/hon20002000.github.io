@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "MacauAIChallenge2019_Lessons_3"
+title:      "Quick_start_python_Lessons_2"
 subtitle:   " \"Ascii, unicode and utf-8\""
-date:       2019-06-09 16:00:00
+date:       2019-06-05 16:00:00
 author:     "hon20002000"
 header-img: "img/Python.png"
 catalog: true
@@ -16,7 +16,8 @@ tags:
 裡面只學習最常用的python語法.
 
 >想更深入了解python, 網上資源可以看[廖雪峰的python教學網站](https://www.liaoxuefeng.com/wiki/1016959663602400)  
->>教得十分仔細, 若想深入python的進階用法可以查看他的內容   
+>或是[RUNOOB.com](http://www.runoob.com/python/python-tutorial.html)python教程  
+>教得十分仔細, 若想深入python的進階用法可以查看他們的內容   
 
 教程用法:  
 >>閱讀本blog上的基礎語法  

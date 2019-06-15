@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "MacauAIChallenge2019_Lessons_2"
+title:      "Quick_start_python_Lessons_1"
 subtitle:   " \"DataTpye, Variable and Operation\""
-date:       2019-06-07 16:00:00
+date:       2019-06-04 16:00:00
 author:     "hon20002000"
 header-img: "img/Python.png"
 catalog: true
@@ -12,7 +12,16 @@ tags:
 ## 前言
 
 本教程是為了讓同學們快速體驗機器學習/深度學習而設計的.  
-裡面只學習最常用的python語法.
+裡面只學習最常用的python語法.主要簡介
+- 數據類型(字串, 數字) 及運算
+- 列表
+- 元組
+- 字典
+- if, elif, else
+- for
+- while
+- 讀取及寫入文件
+- os module
 
 >想更深入了解python可以閱讀下面的入門書
 ><img src="/img/pythonBook.jpg" width="40%">  
@@ -20,7 +29,8 @@ tags:
 >python編程:從入門到實踐這本書很容易學, 用1至2星期看完前10章就夠了  
 >笨方法學python3這本新手入門書很有名, 不過我沒學過  
 >>網上資源可以看[廖雪峰的python教學網站](https://www.liaoxuefeng.com/wiki/1016959663602400)  
->>教得十分仔細, 若想深入python的進階用法可以查看他的內容   
+>>或是[RUNOOB.com](http://www.runoob.com/python/python-tutorial.html)python教程  
+>>教得十分仔細, 若想深入python的進階用法可以查看他們的內容   
 
 教程用法:  
 >>閱讀本blog上的基礎語法  
