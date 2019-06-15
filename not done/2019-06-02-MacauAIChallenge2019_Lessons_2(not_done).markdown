@@ -1,18 +1,17 @@
 ---
 layout:     post
-title:      "MacauAIChallenge2019_Lessons_1"
-subtitle:   " \"machine / deep learning concepts\""
-date:       2019-06-06 16:00:00
+title:      "MacauAIChallenge2019_Lessons_2"
+subtitle:   " \"Intrduction of machine/deep learning\""
+date:       2019-06-02 16:00:00
 author:     "hon20002000"
 header-img: "img/Python.png"
 catalog: true
 tags:
-    - Deep Learning Quick start
-    
+    - Machine/Deep Learning Quick start
 ---
 
 ## 前言
-
+    
 本教程是為了讓同學們快速體驗機器學習/深度學習而設計的.  
 裡面只學習最常用的python語法.  
   
