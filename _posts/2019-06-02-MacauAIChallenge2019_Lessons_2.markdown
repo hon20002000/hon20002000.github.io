@@ -112,7 +112,8 @@ softmax的特點是所有類別的result加起來等於1, 因此有機率的意�
 <img src="img/mnist_5.png" width="40%">  
 <img src="img/dense.png" width="40%">  
 <img src="img/mnist_result.png" width="40%">  
-<img src="img/master.jpg" width="40%"> 
+<img src="img/master.jpg" width="40%">  
+<img src="img/cc.jpg" width="40%">  
 
 ## 練習
   
