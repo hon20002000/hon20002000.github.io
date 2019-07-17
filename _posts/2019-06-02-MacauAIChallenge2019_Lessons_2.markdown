@@ -110,12 +110,12 @@ softmax的特點是所有類別的result加起來等於1, 因此有機率的意�
   
 可觀察到如下的結果:  
 <img src="/img/mnist_5.png" width="40%">  
-<img src="/img/dense.png" width="40%">  
+<img src="/img/dense2.png" width="40%">  
 <img src="/img/mnist_result.png">  
 <img src="/img/master.jpg" width="40%">  
 <img src="/img/cc.jpg" > 
 ![AltText](/img/cc.jpg)
-![AltText](/img/master.jpg)
+![AltText](/img/dense2.png)
 ## 練習
   
 (1)什麼是監督式學習(Supervised learning)?  
