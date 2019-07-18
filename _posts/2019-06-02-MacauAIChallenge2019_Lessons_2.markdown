@@ -34,7 +34,7 @@ mnist是一個含有60000張28x28像素的training data
   
 >概念流程:  
 >(1)load_data    #下載數據集  
->(2)reshape data    #把28*28數據變成784*1, 因為neural network需要這種shape的數據形式來學習
+>(2)reshape data    #把28x28數據變成784x1, 因為neural network需要這種shape的數據形式來學習
 >(3)把label由0~9變為二進制的one-hot編碼, 例如  
 >(0)=[1,0,0,0,0,0,0,0,0,0], (1)=[0,1,0,0,0,0,0,0,0,0]     
 >(4)建立模型 model.Sequential() > models.Dense > layers.Activation > model.summary > model.compile > model.fit
