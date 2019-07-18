@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "MacauAIChallenge2019_Lessons_2"
-subtitle:   " \"Digital classification\""
+subtitle:   " \"mnist classification\""
 date:       2019-06-02 16:00:00
 author:     "hon20002000"
 header-img: "img/Python.png"
