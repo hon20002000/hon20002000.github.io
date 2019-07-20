@@ -54,7 +54,7 @@ tags:
 但是Unicode比ACSII使用多一倍儲存空間, 因此又產生了較為節省空間的可變長度編碼的uft-8  
    
 
-<img src="/img/unicode.png" width="100%">  
+<img src="/img/unicode2.png" width="100%">  
 
 以上內容部分截取自[廖雪峰的python教學網站](https://www.liaoxuefeng.com/wiki/1016959663602400)    
 
