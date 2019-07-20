@@ -89,7 +89,7 @@ xxx是自定義旳名稱, 後面可以運用xxx.read或xxx.write等等
     file.write('E,99\n')
     file.close()
 
-<img src="/img/abc2.png" width="40%">  
+<img src="/img/aaa.png" width="40%">  
 
 下面我們把txt檔案改為csv檔, 我們可以手動改副檔名  
 也可以利用python的一些module把它改掉
@@ -102,7 +102,7 @@ xxx是自定義旳名稱, 後面可以運用xxx.read或xxx.write等等
     import shutil
     shutil.move('abc.txt', 'abc.csv')    
 
-<img src="/img/abc_csv2.png" width="40%">  
+<img src="/img/csv.png" width="40%">  
 可以看到abc.txt已經改為abc.csv了  
 csv檔的全稱是Comma Separated Value  
 它在machine learning或是deep learning都會用到  
