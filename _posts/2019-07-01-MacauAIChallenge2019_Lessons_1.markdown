@@ -2,7 +2,7 @@
 layout:     post
 title:      "MacauAIChallenge2019_Lessons_1"
 subtitle:   " \"Intrduction of machine/deep learning\""
-date:       2019-06-01 16:00:00
+date:       2019-07-01 16:00:00
 author:     "hon20002000"
 header-img: "img/Python.png"
 catalog: true

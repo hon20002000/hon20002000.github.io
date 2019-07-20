@@ -2,7 +2,7 @@
 layout:     post
 title:      "MacauAIChallenge2019_Lessons_2"
 subtitle:   " \"mnist classification\""
-date:       2019-06-02 16:00:00
+date:       2019-07-02 16:00:00
 author:     "hon20002000"
 header-img: "img/Python.png"
 catalog: true
@@ -42,7 +42,8 @@ mnist是一個含有60000張28x28像素的training data
 下面是完整程式碼:    
   
     #使用keras作為我們的語法並import有用的function  
-    import keras    
+    import keras
+    from keras import models, layers   
     from keras.datasets import mnist    
     from keras.models import Sequential    
     from keras.layers import Dense, Dropout, LeakyReLU, Conv2D

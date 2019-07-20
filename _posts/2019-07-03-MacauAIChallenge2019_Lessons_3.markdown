@@ -2,7 +2,7 @@
 layout:     post
 title:      "MacauAIChallenge2019_Lessons_3"
 subtitle:   " \"cifar10 classification\""
-date:       2019-06-03 16:00:00
+date:       2019-07-03 16:00:00
 author:     "hon20002000"
 header-img: "img/Python.png"
 catalog: true
@@ -55,7 +55,8 @@ cifar10是把日常生活中的10種物件分類, 是32x32x3的彩色圖片
 下面是完整程式碼:    
   
     #使用keras作為我們的語法並import有用的function  
-    import keras    
+    import keras   
+    from keras import models, layers   
     from keras.datasets import cifar10  
     from keras.models import Sequential  
     from keras import layers, models, optimizers  
@@ -116,26 +117,37 @@ cifar10是把日常生活中的10種物件分類, 是32x32x3的彩色圖片
 使用CNN作訓練:  
   
     '''使用keras作為我們的語法並import有用的function'''
-    import keras    
+    import keras 
+    from keras import models, layers   
+    from keras.datasets import mnist  
     from keras.datasets import cifar10  
     from keras.models import Sequential  
     from keras import layers, models, optimizers  
-    from keras.layers import Dense, Dropout, LeakyReLU, Conv2D, Activation, MaxPooling2D
+    from keras.layers import Dense, Dropout, Conv2D, Activation, MaxPooling2D
     from keras.optimizers import RMSprop
     from keras import backend as K
     from matplotlib.pyplot import imshow
     import numpy as np
-
+    import time
+    import pandas as pd 
+    from keras.callbacks import CSVLogger
+    
+    np.random.seed(1671)    # for reproducibility, 數字是多少不重要
+    month = time.localtime().tm_mon
+    day = time.localtime().tm_mday
+    hour = time.localtime().tm_hour
+    mins= time.localtime().tm_min
+    date = str(month)+"_" + str(day)+"_" + str(hour)+"_" + str(mins)    #記錄時間
 
     # the data, shuffled and split between train and test sets
-    (x_train, y_train), (x_test, y_test) = cifar10.load_data()    
-    #imshow(x_train[0])
-    #print("x_train.shape:", x_train.shape)
-    #print("x_train[0].shape:", x_train[0].shape)
-    #print("y_train.shape:", y_train.shape)
-    #print("y_test.shape:", y_test.shape)
-    #print("y_train:", y_train)
-    #print("y_test:", y_test)
+    (x_train, y_train), (x_test, y_test) = cifar10.load_data()    #下載cifar10數據集
+    imshow(x_train[1])
+    print("x_train.shape:", x_train.shape)
+    print("x_train[0].shape:", x_train[0].shape)
+    print("y_train.shape:", y_train.shape)
+    print("y_test.shape:", y_test.shape)
+    print("y_train:", y_train)
+    print("y_test:", y_test)
 
     x_train = x_train.astype('float32')
     x_test = x_test.astype('float32')
@@ -149,19 +161,19 @@ cifar10是把日常生活中的10種物件分類, 是32x32x3的彩色圖片
 
     model = models.Sequential()
     # CONV => RELU => POOL
-    model.add(layers.Conv2D(32, (3, 3), input_shape=(32, 32, 3)))    #和圖片的shape一樣
-    model.add(Activation("relu"))    
+    model.add(layers.Conv2D(32, (3, 3), input_shape=(32, 32, 3)))
+    model.add(Activation("relu"))
     model.add(MaxPooling2D(pool_size=(3, 3)))
 
     # CONV => RELU => POOL
-    model.add(Conv2D(64, (3, 3), padding="same"))    #一般使用(3,3)作卷積層, padding="same"
+    model.add(Conv2D(64, (3, 3), padding="same"))
     model.add(Activation("relu"))
     model.add(MaxPooling2D(pool_size=(2, 2)))
 
     # Flatten => RELU
-    model.add(layers.Flatten())    #Flatten()是指將二維的圖像數據自動計算並reshape成一維數據
-    model.add(layers.Activation("relu"))    #若你手動計算reshape的答案, 是可用Dense(1600)取代flatten
-    model.add(layers.Dropout(0.4))    #dropout(0.4)是指將40%的參數不計算, 只隨機使用60%的參數計算結果
+    model.add(layers.Flatten())
+    model.add(layers.Activation("relu"))
+    model.add(layers.Dropout(0.4))
 
     # Dense => RELU
     model.add(layers.Dense(1024))
@@ -179,11 +191,15 @@ cifar10是把日常生活中的10種物件分類, 是32x32x3的彩色圖片
     batch_size = 128
     num_classes = 10
     epochs = 10
+
+    csv_logger = CSVLogger('cifar10'+'_'+date+'.csv', append=True, separator=',')    #使用','作分隔
+
     history = model.fit(x_train, y_train,
                         batch_size=batch_size,
                         epochs=epochs,
                         verbose=1,
-                        validation_data=(x_test, y_test))
+                        validation_data=(x_test, y_test),
+                        callbacks=[csv_logger])     #加上callbacks在model.fit中
 
 結果如下:  
 <img src="/img/cifar10_CNN.png" width="100%">  
@@ -192,7 +208,9 @@ cifar10是把日常生活中的10種物件分類, 是32x32x3的彩色圖片
 CNN是訓練圖像的首選方法, 因為CNN不會把圖像reshape  
 可以保留每個像素之間的關係, 而NN則需要reshape  
 明顯地圖像的資訊已被扭曲, 是強行訓練出結果的  
-其他機器學習方法在圖像分析準確度也不好    
+其他機器學習方法在圖像分析準確度也不好  
+另外我們使用CSVLogger來儲存訓練結果  
+把一些訓練數據記錄能方便我們調節參數及製作報告   
 
 ## 練習
   
