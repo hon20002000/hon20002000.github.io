@@ -48,7 +48,7 @@ tags:
 下面給出所有的程式碼:  
 實踐時只需複製所有的程式碼, 並且安裝好必須的module  
 training_data裡面含有命名為1~120的file  
-不需要全部120種file也可以, 並且裡面都有少量相片, 否則會error    
+不需要全部120種file也可以, 裡面隨意放入20-30張相片作訓練     
 相片太多沒有gpu是運行不了的, 因此只需少量相片便可  
 <img src="/img/fake_file.png" width="90%">   
 
@@ -303,6 +303,7 @@ training_data裡面含有命名為1~120的file
     plt.legend(loc="upper left")
     plt.savefig(CNN+'_'+date+'_'+save_path_png)
 
+==========================ONE==========================  
 這裡把上面的程式碼作簡單介紹, 先介紹第一個function:
 
     def prepare_list_and_dict(img_path):
@@ -355,6 +356,7 @@ training_data裡面含有命名為1~120的file
 相片名稱是讀取data的索引, 而file名稱則是label   
 合併則成為dict   
 
+==========================TWO==========================  
 第二個function是把第一個function準備好的list讀取數據出來:  
 return x,y 表示x_data和y_label已準備好  
 try...except...這種寫法是當程序出現問題是如何處理  
@@ -376,6 +378,7 @@ try...except...這種寫法是當程序出現問題是如何處理
                 pass       
         return x, y 
 
+==========================THREE==========================  
 第三個和第四個function是生成器:    
 
     def data_generator(data, targets, batch_size):    #x=np.array(x_train), y=y_train
@@ -395,7 +398,8 @@ try...except...這種寫法是當程序出現問題是如何處理
                   yield (X, Y)
 
 batches = (len(data) + batch_size - 1)//batch_size   
-是因為data和batch_size相除有小數時自動進位而寫的   
+是因為data和batch_size相除有小數時需要自動進位(不是4捨5入, 4.1也當作5)  
+而batches恰好為整數時則不變  
 <img src="/img/batches.png" width="70%"> 
 
 一個相同功能的寫法是:
@@ -405,9 +409,13 @@ batches = (len(data) + batch_size - 1)//batch_size
     else:
         batches = int(len(data)/batch_size)       #eg. batches = int(10/5) = 2
 
-第五個功能是把相片集自動隨機分為training_data, validation_data及test_data  
+
+==========================FOUR==========================  
+train_test_split是把相片集自動隨機分為2部分  
+為了把一個相片集分為3部分, 首先把相片集分為mid及val, 再把mid分為train和test  
+這樣便得到了training_data, validation_data及test_data  
 比例是任意設定的  
-這裡的技巧是稱為交叉驗證的方法, 即第1次使用隨機的5分3作為training_data  
+這裡的訓練技巧是稱為交叉驗證的方法, 即第1次使用隨機的5分3作為training_data  
 下次則選擇任意隨機的5分3, 最終使用多次後相當於把整個data_set都能用作training  
 不用特意保留5分2的相片用作validation及test, 相當於把相片集的效益最大化  
 但交叉驗證也不是只有好處, 詳情自行查詢  
@@ -416,8 +424,11 @@ batches = (len(data) + batch_size - 1)//batch_size
     x_mid, x_val, y_mid, y_val = train_test_split(x,y, test_size=0.2)    #mid:val = 4:1
     x_train,x_test,y_train,y_test = train_test_split(x_mid,y_mid,test_size=0.25)    #train:test = 3:1
 
-之後連續3個function是一起的, 先設計好數據增強的參數  
+==========================FINAL==========================  
+設定one-hot, CNN這些常規操作之後是數據增強, 生成器及訓練model    
+3個function是一起的, 先設計好數據增強的參數  
 然後套用在生成器的data上, 最後model.fit_generator  
+最後的只是顯示訓練record, model.save, model.evalutate, show picture等等  
 
     train_datagen = ImageDataGenerator(
         zca_whitening=True,
