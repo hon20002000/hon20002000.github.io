@@ -27,10 +27,13 @@ tags:
 ><img src="/img/pythonBook.jpg" width="40%">  
 ><img src="/img/learnPython3.jpeg" width="40%">  
 >python編程:從入門到實踐這本書很容易學, 用1至2星期看完前10章就夠了  
->笨方法學python3這本新手入門書很有名, 不過我沒學過  
+>笨方法學python3這本新手入門書很有名, 不過我沒學過   
+>實際把書上所寫的範例實踐一次   
+>即使學完後忘記了也沒關係, 有印象知道有這些方法能做什麼事就可     
 >>網上資源可以看[廖雪峰的python教學網站](https://www.liaoxuefeng.com/wiki/1016959663602400)  
 >>或是[RUNOOB.com](http://www.runoob.com/python/python-tutorial.html)python教程  
->>教得十分仔細, 若想深入python的進階用法可以查看他們的內容   
+>>教得十分仔細但比較難, 選擇基本的題材選學即可   
+>>若想深入python的進階用法可以查看他們的內容   
 
 教程用法:  
 >>閱讀本blog上的基礎語法  

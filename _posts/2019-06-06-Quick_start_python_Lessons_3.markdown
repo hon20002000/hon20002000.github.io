@@ -37,6 +37,13 @@ list[-1]代表倒數第一個元素, list[-2]代表倒數第二個元素
 列表可用append()來加入新元素
 
     list_a = [1, 2.5, 'a', 'apple']
+    print("list_a[4]:", list_a[4])    
+    =========== result ==========
+    IndexError: list index out of range  
+   
+原本沒有list_a[4]  
+  
+    list_a = [1, 2.5, 'a', 'apple']
     list_a.append(4)
     print("list_a[4]:", list_a[4])    #原本沒有list_a[4]  
   
@@ -133,7 +140,7 @@ for可能是我們在python最先學到的一個重要關鍵字
     i: 1
     i: 2
 
-由此可知使用range()可以控制進行多少次迴圈, for和list可以組合一些用法
+使用range()可以控制進行多少次迴圈, for和list可以組合一些用法
 
     list_a = []
     for i in range(1,4):
@@ -170,8 +177,8 @@ for在python有一個特殊用法, 可以直接操作列表元素
 效果相當於:
 
     name_list = ['sam', 'john', 'monica']   
-    for i in range(len(num_list)):
-        print("name:", num_list[i])
+    for i in range(len(name_list)):
+        print("name:", name_list[i])
     =========== result ==========
     name: sam
     name: john
@@ -200,7 +207,7 @@ for在python有一個特殊用法, 可以直接操作列表元素
     for img in img_slice:
         print("img:", img)    #觀察img是什麼
         save_img.append(img[:2])    #儲存資料
-    print("save_img:", save_img)    #
+    print("save_img:", save_img)    
     =========== result ==========
     img_slice: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]]
     img: [1, 2, 3, 4, 5]
@@ -212,7 +219,7 @@ for在python有一個特殊用法, 可以直接操作列表元素
 
 
 (a) 下列語法運行時出現錯誤:  
-IndentationError: expected an indented blo  
+IndentationError: expected an indented block    
 要如何改才能印出數字呢?
 
     img_data = [1,2,3,4,5]
@@ -220,7 +227,7 @@ IndentationError: expected an indented blo
     print("img:", img)  
 
 (b) 下列語法運行時出現錯誤:  
-IndentationError: expected an indented block  
+IndentationError: invalid syntax    
 要如何改才能印出數字呢?
 
     img_data = [1,2,3,4,5]
