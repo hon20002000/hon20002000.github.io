@@ -36,6 +36,13 @@ tags:
 下面程序需要在[MacauAIChallenge2019_pythonLessons](https://github.com/hon20002000/MacauAIChallenge2019_pythonLessons)裡面下載csv_1.csv檔案  
 把這個csv檔和下面的python程序放在同一個資料夾內, 就可以讀取出來, 否則需要修改路徑  
 裡面描述了4個人的姓名,身高,年齡, 試把他們的全部資料用for及print列印出來  
+  
+<font color="#666600">  
+     
+## 打開csv文件的三種方法  
+  
+</font>   
+
 
     #methon_1
     file =  open('csv_1.csv')   

@@ -139,13 +139,13 @@ return多個返回值
 
 
 (a) 利用函數生成字典, 可以應用在生成機器學習的Label之中:  
-    現在有3筆資料
-    - apple, 3個
-    - orange, 5個
-    - waterlemon, 10個
+    現在有3筆資料  
+    - apple, 3個  
+    - orange, 5個  
+    - waterlemon, 10個  
     試用函數傳遞參數的方式生成字典fruits = {'apple':3, 'orange':5, 'waterlemon':10}, 例如  
     
-    def make_fruit_dict(fruit_1, fruit_2, fruit_3):
+    def make_fruit_dict(fruit_dt, fruit, num):
         ...etc
 
 (b) 函數可以傳遞列表, 例如:
@@ -162,8 +162,68 @@ return多個返回值
     user2: Mary
     user3: Susan
     
-若usernames列表的的數量不固定, 如何編寫合適的函數來print出所有的user?  
+usernames列表的的元素數量是可改變的, 我們不能預先在函數內寫出print多少個數據出來   
 hint: 使用for user in uesrs:  
   
-(c) 編寫等差數列的前n項和函數, def sum_ap(a1, an, d):  
-    傳入首項a1, an及d, 可以自動求出項數n, 並且return Sn的值
+(c) 編寫等差數列的前n項和函數, def sum_ap(a1, d, n):  
+    傳入首項a1, 公差d及項數n, 可以自動求出通項公式an, 並且return an和Sn的值  
+  
+## 解答  
+
+#(a)
+  
+    fruit_dict = {}
+    def make_fruit_dict(fruit_dt, fruit, num):
+        fruit_dt[fruit]=int(num)
+        return fruit_dt
+ 
+    make_fruit_dict(fruit_dict, 'apple', 3)  
+    print("fruit_dict:", fruit_dict)  
+    make_fruit_dict(fruit_dict, 'orange', 5)  
+    print("fruit_dict:", fruit_dict)  
+    make_fruit_dict(fruit_dict, 'waterlemon', 10)  
+    print("fruit_dict:", fruit_dict)  
+    =========== result ==========  
+    fruit_dict: {'apple': 3}  
+    fruit_dict: {'apple': 3, 'orange': 5}  
+    fruit_dict: {'apple': 3, 'orange': 5, 'waterlemon': 10}  
+  
+#(b)  
+  
+    usernames_1 = ['John', 'Mary', 'Susan']  
+    usernames_2 = ['John', 'Mary', 'Susan', 'tommy', 'Joan']  
+  
+    def print_user(users):  
+        count = 0  
+        for user in users:  
+            print("user{}:".format(count), user)  
+            count += 1  
+
+
+    print_user(usernames_1)  
+    print('-'*15)   
+    print_user(usernames_2)  
+    =========== result ==========    
+    user0: John  
+    user1: Mary  
+    user2: Susan  
+    ---------------  
+    user0: John  
+    user1: Mary  
+    user2: Susan  
+    user3: tommy  
+    user4: Joan  
+  
+#(c)  
+  
+    def sum_ap(a1, d, n):    
+        Sn = n*a1+n*(n-1)/2  
+        an = a1 + (n-1)*d  
+        return an, Sn  
+  
+    an, Sn = sum_ap(1,1,10)  
+    print("an:",an)  
+    print("Sn:",Sn)  
+    =========== result ==========    
+    an: 10  
+    Sn: 55.0  
