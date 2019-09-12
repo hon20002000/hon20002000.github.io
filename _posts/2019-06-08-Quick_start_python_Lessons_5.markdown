@@ -202,6 +202,113 @@ hint:
 (1)由於readlines()的list的第一行是字串student,math,eng, 因此第一行並不是我們要的資料  
 我們可以用list[1:]來獲取正確的資料  
 (2)我們讀取csv檔時, 可以用split(',')[0]及split(',')[1]...來取出不同位置的資料  
+  
+## 解答  
+  
+#(a)  
+  
+    #path ='homework.txt'
+    path ='homework.csv'
+    file = open(path, 'w')    
+    file.write('student,math,english\n')
+    file.write('A,55,80\n')
+    file.write('B,36,44\n')
+    file.write('C,80,78\n')
+    file.write('D,77,62\n')
+    file.write('E,99,77\n')
+    file.close()
+    print("done!")
+  
+#(b)  
+  
+    with open('homework.csv') as f:
+        contents = f.readlines()    #把文件一次過讀完, 儲存方法是每行讀取一次, 並保存在contet中
+        print(contents)    #contents是list
+        print(contents[1:])    
+
+    math_sum = []
+    eng_sum = []
+    average = 0
+    for content in contents[1:]:
+        math = int(content.split(',')[1])
+        math_sum.append(math)
+        print(math)    #math
+
+    print("math_max:", max(math_sum))
+    print("math_min:", min(math_sum))
+    print('-'*30)  
+
+    for content in contents[1:]:
+        eng = content.split(',')[2].replace("\n", "")    #english
+        eng_sum.append(eng)
+
+    print(eng_sum)    #math
+
+    print("eng_max:", max(eng_sum))
+    print("eng_min:", min(eng_sum))
+    =========== result ==========  
+    ['student,math,english\n', 'A,55,80\n', 'B,36,44\n', 'C,80,78\n', 'D,77,62\n', 'E,99,77\n']
+    ['A,55,80\n', 'B,36,44\n', 'C,80,78\n', 'D,77,62\n', 'E,99,77\n']
+    55
+    36
+    80
+    77
+    99
+    math_max: 99
+    math_min: 36
+    ------------------------------
+    ['80', '44', '78', '62', '77']
+    eng_max: 80
+    eng_min: 44
+
+使用pandas和numpy庫可以更好地處理資料  
+pandas和numpy是作數據處理的標準流程  
+下一節會進一步講解numpy和pandas的使用方法  
+
+#(b)  
+  
+    import pandas as pd
+    import numpy as np
+    contents = pd.read_csv('homework.csv')
+    content = pd.DataFrame(contents)
+    print(content)
+    print('-'*30)
+    print(content['math'])
+    print("math_mean:", np.mean(content['math']))
+    print("math_max:", np.max(content['math']))
+    print("math_min:", np.min(content['math']))
+    print('-'*30)
+    print(content['english'])
+    print("english_mean:", np.mean(content['english']))
+    print("english_max:", np.max(content['english']))
+    =========== result ==========      
+          student  math  english
+    0       A    55       80
+    1       B    36       44
+    2       C    80       78
+    3       D    77       62
+    4       E    99       77
+    ------------------------------
+    0    55
+    1    36
+    2    80
+    3    77
+    4    99
+    Name: math, dtype: int64
+    math_mean: 69.4
+    math_max: 99
+    math_min: 36
+    ------------------------------
+    0    80
+    1    44
+    2    78
+    3    62
+    4    77
+    Name: english, dtype: int64
+    english_mean: 68.2
+    english_max: 80
+    english_min: 44
+        print("english_min:", np.min(content['english']))
 
 
 
