@@ -252,3 +252,54 @@ IndentationError: invalid syntax
     list_a: [1,2,3,4,5,6]
     list_b: [1,2,3,4,5,6]
 
+## 解答  
+  
+#(a)  
+  
+    img_data = [1,2,3,4,5]
+    for img in img_data:
+        print("img:", img)    #縮進
+    =========== result ==========
+    img: 1
+    img: 2
+    img: 3
+    img: 4
+    img: 5
+  
+#(b)  
+  
+    img_data = [1,2,3,4,5]
+    for img in img_data:    #漏了一個":"號
+        print("img:", img) 
+    =========== result ==========
+    img: 1
+    img: 2
+    img: 3
+    img: 4
+    img: 5
+  
+#(c)  
+  
+    num_list = [n for n in range(1,101)]
+    print("num_list:", num_list)
+    num_sum = sum(num_list)
+    print("num_sum:", num_sum)
+    num_sum_40_to_50 = num_list[39:50]
+    print("num_sum_40_to_50:", num_sum_40_to_50)
+    print("num_sum_40_to_50:", sum(num_sum_40_to_50))
+    =========== result ==========    
+    num_list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+    num_sum: 5050
+    num_sum_40_to_50: [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+    num_sum_40_to_50: 495
+  
+#(d)  
+  
+    list_a = [1,2,3,4,5]
+    list_b = list_a.copy()    #使用.copy()
+    list_b.append(6)
+    print("list_a:", list_a)
+    print("list_b:", list_b)
+    =========== result ==========  
+    list_a: [1, 2, 3, 4, 5]
+    list_b: [1, 2, 3, 4, 5, 6]

@@ -156,3 +156,35 @@ must be str, not int
     print("b+a:", b+a)
     
 unsupported operand type(s) for +: 'int' and 'str'  
+  
+## 解答  
+  
+#(a)  
+  
+    ans=int(input("plz input a number"))  
+    b = 25  
+    print("ans+b:", ans+b)
+    =========== result ==========
+    plz input a number3
+    ans+b: 28
+  
+#(b)  
+  
+    int_a = 13  
+    float_b = 13.55  
+    print("int_a//3:", int_a//3)  
+    print("int_a%3:", int_a%3)  
+    print("float_b//3:", float_b//3)  
+    print("float_b%3:", float_b%3)
+    =========== result ==========
+    nt_a//3: 4
+    int_a%3: 1
+    float_b//3: 4.0
+    float_b%3: 1.5500000000000007
+    
+float 取餘數時會出現問題
+
+    
+    
+    
+

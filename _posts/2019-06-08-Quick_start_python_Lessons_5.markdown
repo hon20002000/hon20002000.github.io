@@ -263,7 +263,7 @@ hint:
 
 使用pandas和numpy庫可以更好地處理資料  
 pandas和numpy是作數據處理的標準流程  
-下一節會進一步講解numpy和pandas的使用方法  
+往後會進一步講解numpy和pandas的使用方法  
 
 #(b)  
   

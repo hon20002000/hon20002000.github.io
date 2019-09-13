@@ -121,3 +121,42 @@ My name is ____, I am ____ years ago.
 
     print('%.2f' % 3.1415926)    #%d表示輸出整數, %f表示輸出浮點數
     print("susan spent {:.1f} dollors, and john spent {} dollors.".format(1.5122,20))
+
+## 解答  
+  
+#(a)  
+  
+    k = 3.1
+    b = 2.6
+    x = 1.2
+    y = k*x+b
+    print('y = %.2f' % y)
+    print('y = {:.2f}'.format(y))
+    =========== result ==========
+    y = 6.32
+    y = 6.32
+  
+#(b)  
+  
+    name = input('name: ')
+    age = int(input('age: '))
+    print("My name is {}, I am {} years ago.".format(name, age))
+    =========== result ==========
+    name: sam
+    age: 18
+    My name is sam, I am 18 years ago.
+  
+#(c)  
+  
+    print('%.2d' % 3.1415926)    #%d表示輸出整數, %f表示輸出浮點數
+    print("susan spent {:.1d} dollors, and john spent {} dollors.".format(1.5122,20))
+    =========== result ========== 
+    03
+    ---------------------------------------------------------------------------
+    ValueError                                Traceback (most recent call last)
+    <ipython-input-7-d55279aea4ae> in <module>
+          1 # (c)
+          2 print('%.2d' % 3.1415926)    #%d表示輸出整數, %f表示輸出浮點數
+    ----> 3 print("susan spent {:.1d} dollors, and john spent {} dollors.".format(1.5122,20))
+
+    ValueError: Unknown format code 'd' for object of type 'float'

@@ -150,3 +150,106 @@ hint:(1)使用列表生成1~100的數, 然後通過刪除法得出剩餘的質�
 (d) 寫出1/2+2/3+3/4+...20/21的值之和?(ANS:17.35...)
 hint:用for及while各寫1次
 
+## 解答  
+  
+  
+#(a)  
+  
+    x = 1
+    y = 2
+    z = 3
+    if z>y>x:
+        print("z>y>x")
+    =========== result ==========
+    z>y>x
+  
+#(b)  
+  
+    list_num = [1,2,3]
+    for i in range(1,4):
+        for j in range(1,4):
+            for k in range(1,4):
+                if (i != j and i != k and k != l):
+                    print("{},{},{}".format(i,j,k))
+    =========== result ==========
+    z>y>x
+    1,2,2
+    1,2,3
+    1,3,2
+    1,3,3
+    2,1,1
+    2,1,3
+    2,3,1
+    2,3,3
+    3,1,1
+    3,1,2
+    3,2,1
+    3,2,2
+  
+#(c)  
+  
+    list_num = []
+    for n in range(2,101):
+        list_num.append(n)    #生成[2,...,100]
+    #print("list_num:", list_num)  
+
+    for n in range(2, 100):
+        for num in list_num:
+            #print(num)
+            if  num % n == 0 and num != n:
+                list_num.remove(num)
+                #print(num, n)
+
+    print("Prime number in list_num:", list_num)
+    print("numbers of prime number in 2~100:", len(list_num))        
+    =========== result ==========
+    Prime number in list_num: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    numbers of prime number in 2~100: 25
+  
+#(c).2  
+  
+    list_num=[]
+    i=2
+    for i in range(2,100):
+       j=2
+       for j in range(2,i):
+          if(i%j==0):
+             break
+       else:
+          list_num.append(i)
+    print("Prime number in list_num:", list_num)
+    print("numbers of prime number in 2~100:", len(list_num))
+    =========== result ==========
+    Prime number in list_num: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    numbers of prime number in 2~100: 25  
+  
+#(d)  
+  
+    ans = 0.0
+    count = 1
+    for n in range(1,21):
+        a = n/(n+1)
+        ans = ans + a
+        print("count:", count, "ans:", ans)
+        count +=1
+    =========== result ==========
+    count: 1 ans: 0.5
+    count: 2 ans: 1.1666666666666665
+    count: 3 ans: 1.9166666666666665
+    count: 4 ans: 2.716666666666667
+    count: 5 ans: 3.5500000000000003
+    count: 6 ans: 4.4071428571428575
+    count: 7 ans: 5.2821428571428575
+    count: 8 ans: 6.171031746031746
+    count: 9 ans: 7.071031746031746
+    count: 10 ans: 7.980122655122655
+    count: 11 ans: 8.896789321789322
+    count: 12 ans: 9.819866244866246
+    count: 13 ans: 10.748437673437675
+    count: 14 ans: 11.681771006771008
+    count: 15 ans: 12.619271006771008
+    count: 16 ans: 13.560447477359244
+    count: 17 ans: 14.504891921803688
+    count: 18 ans: 15.45226034285632
+    count: 19 ans: 16.40226034285632
+    count: 20 ans: 17.354641295237272
