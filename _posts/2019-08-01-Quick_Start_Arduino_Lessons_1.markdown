@@ -7,7 +7,7 @@ author:     "hon20002000"
 header-img: "img/Python.png"
 catalog: true
 tags:
-    - Quick Start Arduino
+    - Arduino Quick Start 
 ---
 ## 前言
   
@@ -32,6 +32,7 @@ tags:
 >>[W3Cschool](https://www.w3cschool.cn/arduino/arduino_keyboard_serial.html)  
 >>[arduino中文社區](https://www.arduino.cn/thread-1066-1-1.html)  
 >>[arduino葉難](http://yehnan.blogspot.com/2012/02/arduino_21.html)  
+>>[Cooper Maa](http://coopermaa2nd.blogspot.com/2011/02/arduino-serial-library.html)    
 >>[arduino大兵萊恩](https://gogoprivateryan.blogspot.com/search/label/arduino)  
 >>其中大兵萊恩裡面有很多有趣的作品       
 
@@ -81,13 +82,4 @@ arduino是一部微處理器, 它能進行一些小的運算量
 
 <p id = "build"></p>
 ---
-  
-  
-
-## 練習
-
-
-
-  
-## 解答  
   
