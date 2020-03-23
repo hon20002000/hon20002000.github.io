@@ -23,7 +23,8 @@ tags:
 
 ## 正文
 
-開發iOS App時，我們都希望App內顯示的資料 (文字、數據、圖片等等)來自網絡上，因此更新數據就來得更加容易。  
+開發iOS App時，我們都希望App內顯示的資料 (文字、數據、圖片等等)來自網絡上，  
+因此更新數據就來得更加容易。   
 而本文所介紹的方法適合單純地從網路抓資料顯示，不需要修改或上傳資料。  
 我們需要利用網上的免費空間來儲存或讀取資料，例如表格資料及圖片。   
 本範例使用Google Spreadsheet & imgur來儲存資料，我們一需要把表格資料轉換成 JSON 然後和 iOS App 串接。  
@@ -31,9 +32,9 @@ tags:
 ## 申請imgur的account  
   
 首先利用imgur來上載一些圖片，目的是獲得圖片的url  
-注意圖片的url是(https://i.imgur.com/rOFDO9i.jpg)  
+注意圖片的url含有.jpg或.png等副檔名(https://i.imgur.com/rOFDO9i.jpg)  
 而不是網站的url(https://hon20002000.imgur.com/all)  
-在imgur注冊一個帳號，然後上傳圖片，最後點擊圖片copy url  
+在imgur注冊一個帳號，然後上傳圖片，最後點擊圖片把url copy到試算表上  
 <img src="/img/1.gif" width="70%">  
   
 ## 建立Google Spreadsheet
@@ -47,18 +48,19 @@ https://docs.google.com/spreadsheets/u/0/
 輸入如下圖中的資料，copy圖片在 imgur的網址。   
 注意儲存格中所有數據都必須是String格式，否則在Swift後面的處理會遇到麻煩。  
 例如數字1在儲存格被定義為Int，而No.001則被定義為String，這是要注意的。  
-<img src="/img/20200224.png" width="50%"> 
+<img src="/img/20200224.png" width="70%"> 
   
 然後在google sheet的檔案按發佈到網路  
 <img src="/img/20200224_1.png" width="50%">  
   
 ## 把google sheet的資料轉換成JSON的格式  
   
-我們利用gsx2json把我們的google sheet轉換  
-轉換方法是把下面網址上的xxxxx替換成你的id  
+我們利用gsx2json把我們的google sheet轉換成swift可使用的json格式    
+轉換方法是把下面網址上的xxxxx替換成你google sheet上的網址id  
 
 http://gsx2json.com/api?id=xxxxxxx&columns=false  
 
+google sheet網址上其中一段文字即為id  
 <img src="/img/link.png" width="100%">  
   
     現在有3筆資料  
