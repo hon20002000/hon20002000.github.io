@@ -28,7 +28,7 @@ tags:
 我們需要利用網上的免費空間來儲存或讀取資料，例如表格資料及圖片。   
 本範例使用Google Spreadsheet & imgur來儲存資料，我們一需要把表格資料轉換成 JSON 然後和 iOS App 串接。  
 
-## 建立Google Spreadsheet  
+## 申請imgur的account  
   
 首先利用imgur來上載一些圖片，目的是獲得圖片的url  
 注意圖片的url是(https://i.imgur.com/rOFDO9i.jpg)  
@@ -48,8 +48,19 @@ https://docs.google.com/spreadsheets/u/0/
 注意儲存格中所有數據都必須是String格式，否則在Swift後面的處理會遇到麻煩。  
 例如數字1在儲存格被定義為Int，而No.001則被定義為String，這是要注意的。  
 <img src="/img/20200224.png" width="50%"> 
+  
+然後在google sheet的檔案按發佈到網路  
+<img src="/img/20200224_1.png" width="50%">  
+  
+## 把google sheet的資料轉換成JSON的格式  
+  
+我們利用gsx2json把我們的google sheet轉換  
+轉換方法是把下面網址上的xxxxx替換成你的id  
 
-(a) 利用函數生成字典, 可以應用在生成機器學習的Label之中:  
+http://gsx2json.com/api?id=xxxxxxx&columns=false  
+
+<img src="/img/link.png" width="100%">  
+  
     現在有3筆資料  
     - apple, 3個  
     - orange, 5個  
