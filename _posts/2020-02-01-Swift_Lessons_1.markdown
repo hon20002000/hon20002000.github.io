@@ -17,55 +17,27 @@ tags:
 最後更新: 2020/02/01    
 '''   
   
-本教程copy自(https://ccng830.github.io/2020/03/02/Google-Spreadsheet-JSON-&-imgur/) 
-並加入一些圖片作補充.
+本教程參考自(https://ccng830.github.io/2020/03/02/Google-Spreadsheet-JSON-&-imgur/)   
+並加入一些圖片作補充.  
 
->想更深入了解python, 網上資源可以看[廖雪峰的python教學網站](https://www.liaoxuefeng.com/wiki/1016959663602400)  
->或是[RUNOOB.com](http://www.runoob.com/python/python-tutorial.html)python教程
->教得十分仔細, 若想深入python的進階用法可以查看他們的內容   
-
-教程用法:  
->>閱讀本blog上的基礎語法  
->>完成每篇文章的作業  
->>部分學習所需的檔案在[github](https://github.com/hon20002000/MacauAIChallenge2019_pythonLessons)下載  
->>遇到問題或其他改善建議可在下面留言
-
-
-<p id = "build"></p>
----
 
 ## 正文
 
-numpy和pandas module是機器學習必學的庫  
-python內置的list功能很弱, 某些切片功能list是做不到的  
-而numpy可以快捷地計算, 切片和reshape多維數組  
-pandas在機器學習的使用較多, 它能輕易的組織及處理table類的表格(類似excel的功能)    
-而在深度學習中則較少使用, 因為處理圖像不需這些功能, 因此pandas在深度學習中不是必須的   
+開發iOS App時，我們都希望App內顯示的資料 (文字、數據、圖片等等)來自網絡上，因此更新數據就來得更加容易。  
+而本文所介紹的方法適合單純地從網路抓資料顯示，不需要修改或上傳資料。  
+我們需要利用網上的免費空間來儲存或讀取資料，例如表格資料及圖片。   
+本範例使用Google Spreadsheet & imgur來儲存資料，我們一需要把表格資料轉換成 JSON 然後和 iOS App 串接。  
 
-    
+
+## 建立Google Spreadsheet
+  
+搜尋Google Spreadsheet(Google 試算表)，即下面的link  
    
-
-
-
-return多個返回值     
-
-    def calucale(x):
-        y = 3*x + 4
-        z = -2*x + 1
-        return y, z
-
-    result_1, result_2 = calucale(10)
-    print("result_1:", result_1)   
-    print("result_2:", result_2) 
-    =========== result ==========
-    result: 34
-    result: -19
-    
-<p id = "build"></p>
----
-    
-## 練習
-
+https://docs.google.com/spreadsheets/u/0/    
+  
+按右下角的按鈕，新增Spreadsheet  
+  
+img src="/img/new_sheet.png" width="40%">    
 
 (a) 利用函數生成字典, 可以應用在生成機器學習的Label之中:  
     現在有3筆資料  
