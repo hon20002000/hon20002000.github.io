@@ -30,28 +30,24 @@ tags:
 
 ## 建立Google Spreadsheet  
   
-首先利用imgur來在上載一些圖片，目的是獲得圖片的url  
+首先利用imgur來上載一些圖片，目的是獲得圖片的url  
 注意圖片的url是(https://i.imgur.com/rOFDO9i.jpg)  
 而不是網站的url(https://hon20002000.imgur.com/all)  
-首先在imgur注冊一個帳號，然後上傳圖片，最後點擊圖片copy url  
+在imgur注冊一個帳號，然後上傳圖片，最後點擊圖片copy url  
 <img src="/img/1.gif" width="70%">  
   
 ## 建立Google Spreadsheet
   
 搜尋Google Spreadsheet(Google 試算表)，即下面的link  
-   
 https://docs.google.com/spreadsheets/u/0/    
-  
 按右下角的按鈕，新增Spreadsheet  
   
-<img src="/img/new_sheet.png" width="40%">    
+<img src="/img/new_sheet.png" width="30%">    
 
-    
-
-輸入如圖中的資料，圖片透過免費的 imgur作上傳，上傳後copy圖片的網址。   
+輸入如下圖中的資料，copy圖片在 imgur的網址。   
 注意儲存格中所有數據都必須是String格式，否則在Swift後面的處理會遇到麻煩。  
 例如數字1在儲存格被定義為Int，而No.001則被定義為String，這是要注意的。  
-
+<img src="/img/20200224.png" width="50%"> 
 
 (a) 利用函數生成字典, 可以應用在生成機器學習的Label之中:  
     現在有3筆資料  
