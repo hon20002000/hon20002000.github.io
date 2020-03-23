@@ -34,7 +34,7 @@ tags:
 注意圖片的url是(https://i.imgur.com/rOFDO9i.jpg)  
 而不是網站的url(https://hon20002000.imgur.com/all)  
 首先在imgur注冊一個帳號，然後上傳圖片，最後點擊圖片copy url  
-<img src="/img/1.gif" width="40%">  
+<img src="/img/1.gif" width="70%">  
   
 ## 建立Google Spreadsheet
   
