@@ -28,7 +28,14 @@ tags:
 我們需要利用網上的免費空間來儲存或讀取資料，例如表格資料及圖片。   
 本範例使用Google Spreadsheet & imgur來儲存資料，我們一需要把表格資料轉換成 JSON 然後和 iOS App 串接。  
 
-
+## 建立Google Spreadsheet  
+  
+首先利用imgur來在上載一些圖片，目的是獲得圖片的url  
+注意圖片的url是(https://i.imgur.com/rOFDO9i.jpg)  
+而不是網站的url(https://hon20002000.imgur.com/all)  
+首先在imgur注冊一個帳號，然後上傳圖片，最後點擊圖片copy url  
+<img src="/img/1.gif" width="40%">  
+  
 ## 建立Google Spreadsheet
   
 搜尋Google Spreadsheet(Google 試算表)，即下面的link  
@@ -39,7 +46,7 @@ https://docs.google.com/spreadsheets/u/0/
   
 <img src="/img/new_sheet.png" width="40%">    
 
-<img src="/img/gif1.gif" width="40%">    
+    
 
 輸入如圖中的資料，圖片透過免費的 imgur作上傳，上傳後copy圖片的網址。   
 注意儲存格中所有數據都必須是String格式，否則在Swift後面的處理會遇到麻煩。  
