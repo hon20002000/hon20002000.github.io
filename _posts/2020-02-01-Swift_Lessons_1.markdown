@@ -63,6 +63,10 @@ http://gsx2json.com/api?id=xxxxxxx&columns=false
 google sheet網址上其中一段文字即為id  
 <img src="/img/link.png" width="100%">  
   
+若成功後輸入網址將會顯示你輸入的資料，這網址可以被swift使用，如下圖所示：
+  
+<img src="/img/gsx2json.png" width="100%">    
+  
     現在有3筆資料  
     - apple, 3個  
     - orange, 5個  
