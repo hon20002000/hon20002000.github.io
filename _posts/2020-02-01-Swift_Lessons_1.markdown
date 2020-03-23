@@ -37,7 +37,14 @@ https://docs.google.com/spreadsheets/u/0/
   
 按右下角的按鈕，新增Spreadsheet  
   
-img src="/img/new_sheet.png" width="40%">    
+<img src="/img/new_sheet.png" width="40%">    
+
+<img src="/img/gif1.gif" width="40%">    
+
+輸入如圖中的資料，圖片透過免費的 imgur作上傳，上傳後copy圖片的網址。   
+注意儲存格中所有數據都必須是String格式，否則在Swift後面的處理會遇到麻煩。  
+例如數字1在儲存格被定義為Int，而No.001則被定義為String，這是要注意的。  
+
 
 (a) 利用函數生成字典, 可以應用在生成機器學習的Label之中:  
     現在有3筆資料  
