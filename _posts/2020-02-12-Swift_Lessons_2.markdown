@@ -49,7 +49,7 @@ SDWebImage是一款第三方插件用來處理app的圖片下載問題
 <img src="/img/pod_workspace.png" width="70%">   
 我們使用此專案來開發app  
 
-接下來我們在API_Test下的Info.plist加入   
+接下來我們在API_Test下的Info.plist開放手機的權限   
 點一下Information Property List，然後按'+'，加入App Transport Security Settings    
 然後同樣在App Transport Security Settings上點一樣，然後按'＋'  
 加入Allow Arbitrary Loads，並選擇yes  
@@ -59,17 +59,88 @@ SDWebImage是一款第三方插件用來處理app的圖片下載問題
 並在view controller的Navigation bar上的title改為pokemon(可以改其他名稱)  
 <img src="/img/3.gif" width="70%">   
 
-拉入table view  並連上dataSource及delegate  
-並且在viewcontroller.swift上要手動加上UITableViewDataSource, UITableViewDelegate  
+拉入table view  按著control及滑鼠左鍵連上dataSource及delegate,   
+以及table view要連上viewcontroller.swift  
+<img src="/img/4.gif" width="70%">   
+  
+viewcontroller.swift上要手動加上UITableViewDataSource, UITableViewDelegate  
 等一會後系統警告需要fix error，按fix便可  
 <img src="/img/tableview.png" width="70%">    
-操作如下  
-<img src="/img/4.gif" width="70%">     
+  
+總結如下：    
+(1)tableview 連上UITableViewDataSource, UITableViewDelegate  
+(2)tableview 連上viewcontroller.swift的outlet  
+(3)viewcontroller.swift上手動加上UITableViewDataSource, UITableViewDelegate 並fix  
 
-(1)table
-## 建立Google Spreadsheet
-  
+最後只要copy下面的code copy到viewcontroller.swift上便完成  
+    
+    
+    import UIKit
+    import SDWebImage
 
-  
-## 把google sheet的資料轉換成JSON的格式  
-  
+    class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+        
+        var pokeDetail: [String] = []
+        var url = [String]()
+        @IBOutlet weak var myTableView: UITableView!
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return pokeDetail.count
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            tableView.rowHeight = 180
+            let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+            cell.imageView?.sd_setImage(with: URL(string: url[indexPath.row]))
+            cell.textLabel?.text = pokeDetail[indexPath.row]
+            return cell
+        }
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            getpokeData()
+        }
+
+        //MARK: --- Pokemon API
+        struct PokeResults: Codable {
+            let rows: [Poke]
+        }
+
+        struct Poke: Codable {
+            let num: String
+            let name: String
+            let property: String
+            let image: String
+        }
+
+        func getpokeData() {
+            let address = "http://gsx2json.com/api?id=1RvCfk-bgIt4UHOzwIYtt0P3VFv8Iutj7wUKdKQQS-_8&columns=false"
+            if let url = URL(string: address) {
+                // GET
+                URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    if let error = error {
+                        print("Error: \(error.localizedDescription)")
+                    } else if let response = response as? HTTPURLResponse,let data = data {
+                        print("Status code: \(response.statusCode)")
+                        let decoder = JSONDecoder()
+                        
+                        if let pokeResults = try? decoder.decode(PokeResults.self, from: data) {
+                            DispatchQueue.main.async{
+                                for poke in pokeResults.rows {
+                                    self.pokeDetail.append(poke.num + " " + poke.name + " " + poke.property)
+                                    self.url.append(poke.image)
+                                }
+                                self.myTableView.reloadData()
+                            }
+                        }
+                    }
+                }.resume()
+            } else {
+                print("Invalid URL.")
+            }
+        }
+        
+    }
+
+
+
