@@ -41,13 +41,31 @@ SDWebImage是一款第三方插件用來處理app的圖片下載問題
 
 文件夾下會新增了podfile，打開podfile後  
 <img src="/img/podinit.png" width="70%">    
-加上pod 'SDWebImage' :modular_headers => true  
+加上pod 'SDWebImage', :modular_headers => true  
 然後再在終端機輸入pod install  
 成功後API_test的文件夾下會生成一個新的專案  
+若顯示錯誤則可能是大小寫問題或少了一些標點符號
 <img src="/img/pod_workspace.png" width="70%">   
 我們使用此專案來開發app  
 
+接下來我們在API_Test下的Info.plist加入   
+點一下Information Property List，然後按'+'，加入App Transport Security Settings    
+然後同樣在App Transport Security Settings上點一樣，然後按'＋'  
+加入Allow Arbitrary Loads，並選擇yes  
+<img src="/img/2.gif" width="70%">   
   
+接下來在storyboard的view controller上加入Navigation controller  
+並在view controller的Navigation bar上的title改為pokemon(可以改其他名稱)  
+<img src="/img/3.gif" width="70%">   
+
+拉入table view  並連上dataSource及delegate  
+並且在viewcontroller.swift上要手動加上UITableViewDataSource, UITableViewDelegate  
+等一會後系統警告需要fix error，按fix便可  
+<img src="/img/tableview.png" width="70%">    
+操作如下  
+<img src="/img/4.gif" width="70%">     
+
+(1)table
 ## 建立Google Spreadsheet
   
 
