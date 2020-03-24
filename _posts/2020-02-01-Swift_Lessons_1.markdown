@@ -71,6 +71,7 @@ google sheet網址上其中一段文字即為id
 (swift上不會用到son Editor Online，此網站只是讓我們了解JSON是如何排列資料)  
 http://jsoneditoronline.org/#left=local.woxipo&right=local.nenoge  
 將所有資料copy後，貼到左側，再按下「Copy > 」的按鈕  
+如此右側便會顯示我們排版後的資料結構    
 <img src="/img/jsoneditonline.png" width="80%">   
 >下一教程將使用gsx2json上的資料來制作app  
  
