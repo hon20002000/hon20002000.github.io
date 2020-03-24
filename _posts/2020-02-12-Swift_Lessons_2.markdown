@@ -42,6 +42,7 @@ SDWebImage是一款第三方插件用來處理app的圖片下載問題
 文件夾下會新增了podfile，打開podfile後  
 <img src="/img/podinit.png" width="70%">    
 加上pod 'SDWebImage', :modular_headers => true  
+<img src="/img/SDWebImage.png" width="70%">  
 然後再在終端機輸入pod install  
 成功後API_test的文件夾下會生成一個新的專案  
 若顯示錯誤則可能是大小寫問題或少了一些標點符號
