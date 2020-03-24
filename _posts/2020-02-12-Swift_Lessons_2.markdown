@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Swift_Lessons_2"
-subtitle:   " \"利用Google Spreadsheet JSON & Imgur 開發App (2)\""
+subtitle:   " \"使用TableView顯示遠端資料 - Google Spreadsheet JSON & Imgur  (2)\""
 date:       2020-02-12 16:00:00
 author:     "hon20002000"
 header-img: "img/Python.png"
@@ -17,7 +17,7 @@ tags:
 最後更新: 2020/02/01    
 '''   
   
-本教程參考自(https://ccng830.github.io/2020/03/02/Google-Spreadsheet-JSON-&-imgur/)   
+本教程參考自(https://ccng830.github.io/2020/03/03/Google-Spreadsheet-JSON-&-imgur(2)/)   
 並加入一些圖片作補充.  
 
 
@@ -33,12 +33,20 @@ SDWebImage是一款第三方插件用來處理app的圖片下載問題
 <img src="/img/sdwebimage.png" width="70%">    
 
 我們首先在XCode中開啟新project，取名API_test後關閉它  
+我們在此專案下使用pod生成新的插件專案  
 找出此API_test文件的路徑，開啟終端機後前往此文件夾  
-即是cd file_path，enter後再輸入pod init  
+(1)cd file_path  
+(2)pod init  
 <img src="/img/pod_init.png" width="70%">    
 
+文件夾下會新增了podfile，打開podfile後  
+<img src="/img/podinit.png" width="70%">    
+加上pod 'SDWebImage' :modular_headers => true  
+然後再在終端機輸入pod install  
+成功後API_test的文件夾下會生成一個新的專案  
+<img src="/img/pod_workspace.png" width="70%">   
+我們使用此專案來開發app  
 
- 
   
 ## 建立Google Spreadsheet
   
