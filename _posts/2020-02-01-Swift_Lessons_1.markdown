@@ -112,4 +112,4 @@ action則表示按下button時執行其他功能
     }  
   
 可以自行嘗試    
-<img src="/img/press_button2.gif" width="70%">    
+<img src="/img/press_button2.gif" width="25%">    
