@@ -44,7 +44,7 @@ swift中在進行coding前要先了解一下下面的概念圖
 找出label拉到view上  
 <img src="/img/label.gif" width="70%">  
 按右上角的分屏按鈕，開出一個版面，選擇左邊的viewController.swift  
-那麼畫面便會進入coding部分，將label拉到code中的class ViewController: UIViewController裡面  
+那麼畫面便會進入coding部分，將label(按住control然後用左鍵)拉到code中的class ViewController: UIViewController裡面  
 這時需要幫label命名(例如label1)，coding中便可以使用此命名來控制此label  
 那麼view和controller的連結便完成  
 <img src="/img/label_link.gif" width="70%">  
