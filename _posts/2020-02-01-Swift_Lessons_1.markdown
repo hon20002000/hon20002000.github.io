@@ -66,8 +66,49 @@ swift中在進行coding前要先了解一下下面的概念圖
 imageView.image = UIImage(named: "a1.jpg")  
 此句code的意思是 imageView相框.圖片 = "a1.jpg"
 <img src="/img/imageView2.png" width="80%">  
+   
+## 使用button控制label和imageView上的顯示  
   
-## 把google sheet的資料轉換成JSON的格式  
+我們拉出button，貼在view上並連結去viewController.swift上  
+button連結時有outlet和action兩個選擇，outlet表示只作顯示  
+action則表示按下button時執行其他功能  
+選擇action後並命名button  
+並在button的action內加入function -- showPicture()  
+然後我們在code的最下方加上function的內容  
   
+    func showPicture(){
+        imageView.image = UIImage(named:"a1.jpg")
+        label1.text = "以津真天"
+    }
+ <img src="/img/button.gif" width="70%">     
+三項功能的完整code如下
+  
+    import UIKit
 
+    class ViewController: UIViewController {
+        @IBAction func button(_ sender: Any) {
+            showPicture()
+        }
+        
+        @IBOutlet weak var label1: UILabel!
+        
+        @IBOutlet weak var imageView: UIImageView!
+        override func viewDidLoad() {
+            super.viewDidLoad()
+        }
+        func showPicture(){
+            imageView.image = UIImage(named: "a1.jpg")
+            label1.text = "以津真天"
+        }
+    }
+ <img src="/img/press_button.gif" width="70%">    
+接下來若想回復原狀，則可新設多一個button  
+用同樣的方法操作，並設置新的function為cancel  
+
+    func showPicture(){
+      imageView.image = nil
+      label1.text = "SHOW"
+    }  
+
+可以自行嘗試
  
