@@ -79,8 +79,9 @@ action則表示按下button時執行其他功能
     func showPicture(){
         imageView.image = UIImage(named:"a1.jpg")
         label1.text = "以津真天"
-    }
- <img src="/img/button.gif" width="70%">     
+    }  
+    
+<img src="/img/button.gif" width="70%">     
 三項功能的完整code如下
   
     import UIKit
