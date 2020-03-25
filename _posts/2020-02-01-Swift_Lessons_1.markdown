@@ -110,6 +110,6 @@ action則表示按下button時執行其他功能
       imageView.image = nil
       label1.text = "SHOW"
     }  
-
-可以自行嘗試
+  
+可以自行嘗試    
 <img src="/img/press_button2.gif" width="70%">    
