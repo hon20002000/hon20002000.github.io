@@ -26,14 +26,14 @@ tags:
 本範例簡單地說明在swift中如何使用這三個功能    
 swift中在進行coding前要先了解一下下面的概念圖  
 
-<img src="/img/swift_concept1.png" width="50%">    
-<img src="/img/swift_concept2.png" width="50%">  
+<img src="/img/swift_concept1.png" width="70%">    
+<img src="/img/swift_concept2.png" width="70%">  
 一個app的運行由3部分構成  
 第一部分是view，即是用戶能看到的介面  
 第二部分是controller，，即是控制和更新view介面的代碼部分  
 第三部分是model，包含app需要使用的文件及資料  
 我們暫時先了解view和controller的關係  
-由於view被controller控制，所以view上的label，button等必須和contoller連繫  
+由於view被controller控制，所以view上的label，button等必須和controller連繫  
 但是swift不會自動將你在view上的label等和controller上的code連接  
 因此初學者最容易出現的bug就是忘記把view和controller連線  
 下面開始本教程的操作  
@@ -41,9 +41,15 @@ swift中在進行coding前要先了解一下下面的概念圖
 ## 搜索及貼上label在view上 
   
 我們在Xcode介面的右上角可以找到'＋'按鈕  
-然後找出label拉到view上  
+找出label拉到view上  
 <img src="/img/label.gif" width="70%">  
-然後
+按右上角的分屏按鈕，開出一個版面，選擇左邊的viewController.swift  
+那麼畫面便會進入coding部分，將label拉到code中的class ViewController: UIViewController裡面  
+那麼view和controller的連結便完成  
+<img src="/img/label_link.gif" width="70%">  
+這時按play運行模擬器便可以成功  
+<img src="/img/show.png" width="70%">  
+
 ## 建立Google Spreadsheet
   
 搜尋Google Spreadsheet(Google 試算表)，即下面的link  
