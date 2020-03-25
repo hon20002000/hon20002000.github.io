@@ -51,7 +51,7 @@ swift中在進行coding前要先了解一下下面的概念圖
 成功連結的code旁邊會有一個黑色圓點(若是空心圓點表示沒有連結)  
 <img src="/img/linking.png" width="70%">  
 這時按play運行模擬器便可以成功  
-<img src="/img/show.png" width="35%">  
+<img src="/img/show.png" width="25%">  
 
 ## 把imageView貼在view上
   
@@ -61,8 +61,11 @@ swift中在進行coding前要先了解一下下面的概念圖
  要顯示圖片要先把圖片拉到Assets.xcassets上(main.storyboard下面的文件夾)  
 <img src="/img/a1.gif" width="70%">  
 <img src="/img/imageView.gif" width="70%">  
-然後我們把畫面轉到viewController.swift中完成coding  
-<img src="/img/imageView2.png" width="70%">  
+然後我們把畫面轉到viewController.swift中  
+在super.viewDidLoad()下面加入  
+imageView.image = UIImage(named: "a1.jpg")  
+此句code的意思是 imageView相框.圖片 = "a1.jpg"
+<img src="/img/imageView2.png" width="80%">  
   
 ## 把google sheet的資料轉換成JSON的格式  
   
