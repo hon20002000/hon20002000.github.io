@@ -101,11 +101,11 @@ action則表示按下button時執行其他功能
             imageView.image = UIImage(named: "a1.jpg")
             label1.text = "以津真天"
         }
-    }
- <img src="/img/press_button.gif" width="70%">    
+    }    
+<img src="/img/press_button.gif" width="70%">    
 接下來若想回復原狀，則可新設多一個button  
 用同樣的方法操作，並設置新的function為cancel  
-
+  
     func showPicture(){
       imageView.image = nil
       label1.text = "SHOW"
